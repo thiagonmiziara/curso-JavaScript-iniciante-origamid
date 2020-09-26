@@ -1,22 +1,16 @@
 // crie uma função para verificar se um falor é truthy
 
-function verificar(numero, numero2) {
-    if (numero === numero2) {
-        return true;
-    } else {
-        return false;
-    }
-
+function verificar(dado) {
+    return !!dado;
 }
-console.log(verificar(40, "40"))
+console.log(verificar(20))
 
 // Crie uma função  matemática que retorne o preimetro de um quadrado
 
-function perimetroQuadrado(lado1, lado2, lado3, lado4) {
-    let soma = lado1 + lado2 + lado3 + lado4;
-    return `O perimetro quadrado é ${soma}`;
+function perimetroQuadrado(lado) {
+    return `O perimetro quadrado é ${lado * 4}`;
 }
-console.log(perimetroQuadrado(4, 4, 4, 4));
+console.log(perimetroQuadrado(5));
 
 // crie uma função que retorne seu nome completo
 
@@ -31,30 +25,23 @@ console.log(nomeCompleto("Thiago", " Miziara"));
 function parOuImpar(par) {
     let numero = par
     if ((numero * numero) / 2 % numero === 0) {
-        return "É par"
+        return `${par} é par!`
     } else {
-        return "É impar"
+        return `${par} é impar!`
     }
 }
-console.log(parOuImpar(10));
+console.log(parOuImpar(3));
 
 // crie uma função que retorne o tipo de dado do argumento passado nela
 
-function argumento(numero) {
-    console.log(typeof numero)
-    if (typeof numero !== "number") {
-        return "Por favor preencha um número"
-    } else if (numero === 33) {
-        return `isso sim é um número ${numero}`
-    } else {
-        return "Digite o número 33"
-    }
+function tipoDeDado(dado) {
+    return typeof(dado);
 }
-console.log(argumento(33));
+console.log(tipoDeDado("dfsdfs"));
 
 
-// crie um evento que quando scroll apareca seu nome completo // obs fiz com dblclick pq a página nao tem como scrollar.
-addEventListener('dblclick', function() {
+// crie um evento que quando scroll apareca seu nome completo /
+addEventListener('scroll', function() {
     console.log("Thiago Nunes Miziara")
 })
 
